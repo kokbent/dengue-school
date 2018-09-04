@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="project" actualview="Paquete Cartográfico 2010" version="Mapa Digital">
+  <spaceView name="Paquete Cartográfico 2010" visible="True" width="1285" height="848" maximized="True" panWidth="291" extent="XMin:3500663.3497 YMin:897964.8745 XMax:3994856.6904 YMax:1230055.785">
+    <config backColor="255:255:255" selectionColor="255:255:0" outlineonly="False" transparency="50" scale="True" gdi="0">
+      <minimap visible="False" fileName="" />
+      <coordsys wkt="PROJCS[&quot;International_Terrestrial_Reference_Frame_1992Lambert_Conformal_Conic_2SP&quot;,GEOGCS[&quot;GCS_International_Terrestrial_Reference_Frame_1992&quot;,DATUM[&quot;International_Terrestrial_Reference_Frame_1992&quot;,SPHEROID[&quot;GRS_1980&quot;,6378137,298.257222101],TOWGS84[0,0,0,0,0,0,0]],PRIMEM[&quot;Greenwich&quot;,0],UNIT[&quot;Degree&quot;,0.0174532925199433]],PROJECTION[&quot;Lambert_Conformal_Conic_2SP&quot;,AUTHORITY[&quot;EPSG&quot;,&quot;9802&quot;]],PARAMETER[&quot;Central_Meridian&quot;,-102],PARAMETER[&quot;Latitude_Of_Origin&quot;,12],PARAMETER[&quot;False_Easting&quot;,2500000],PARAMETER[&quot;False_Northing&quot;,0],PARAMETER[&quot;Standard_Parallel_1&quot;,17.5],PARAMETER[&quot;Standard_Parallel_2&quot;,29.5],PARAMETER[&quot;Scale_Factor&quot;,1],UNIT[&quot;Meter&quot;,1,AUTHORITY[&quot;EPSG&quot;,&quot;9001&quot;]]]" />
+    </config>
+    <group name="Marco Geoestadístico Estatal 2010" metadata="" expanded="True">
+      <layer name="Entidad federativa" fileName="estatal.shp" zorder="8" indexDoc="-1" visible="True" expanded="True" transparency="0" minScale="0" maxScale="5.88235294117647E-309" metadata="">
+        <polygon color="234:230:222" pattern="SOLID" patternName="" outLineColor="143:95:0" outLineWidth="2" outLineStyle="SOLID" />
+        <attribute name="Población" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" viewDesc="True" selectionColor="141:214:247" />
+        <relation name="Características Económicas" fileName="tablas\cpv2010_estatal_caracteristicas_economicas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Servicios de Salud" fileName="tablas\cpv2010_estatal_servicios_de_Salud.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Características Educativas" fileName="tablas\cpv2010_estatal_caracteristicas_educativas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Fecundidad" fileName="tablas\cpv2010_estatal_fecundidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Hogares Censales" fileName="tablas\cpv2010_estatal_hogares_Censales.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Migración" fileName="tablas\cpv2010_estatal_migracion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Mortalidad" fileName="tablas\cpv2010_estatal_mortalidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Discapacidad" fileName="tablas\cpv2010_estatal_discapacidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Hablantes de Lengua Indígena" fileName="tablas\cpv2010_estatal_lengua_indigena.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Religión" fileName="tablas\cpv2010_estatal_religion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Situación Conyugal" fileName="tablas\cpv2010_estatal_situacion_Conyugal.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Vivienda" fileName="tablas\cpv2010_estatal_Viviendas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Índices de Desarrollo Social" fileName="tablas\cpv2010_estatal_desarrollo_social.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <labels visible="True" color="255:255:255" colorField="" fontName="Arial" fontSize="13" fontStyle="BOLD" fontColor="0:66:171" fontColorField="" rotate="0" rotateField="" position="UPLEFT:UPCENTER:UPRIGHT:MIDDLELEFT:MIDDLECENTER:MIDDLERIGHT:DOWNLEFT:DOWNCENTER:DOWNRIGHT"positionField="" alignment="LEFTJUSTIFY" duplicates="True" allocator="True" minScale="0" maxScale="5.88235294117647E-309">
+          <field fieldName="NOMBRE" alias="Población" visible="True" mask="" constant="" separator="&lt;br&gt;" fieldType="C" fontName="Arial" fontSize="13" fontColor="111:0:0" rotate="0" bold="True" italic="False" underline="False" />
+        </labels>
+        <description text="Área geoestadística de las entidades federativas de la República Mexicana, correspondiente al Marco Geoestadístico Nacional 2010." />
+      </layer>
+      <layer name="Municipios" fileName="municipal.shp" zorder="7" indexDoc="-1" visible="True" expanded="True" transparency="0" minScale="0" maxScale="5.88235294117647E-309" metadata="">
+        <polygon color="251:249:247" pattern="TRANSPARENT" patternName="" outLineColor="60:197:0" outLineWidth="1" outLineStyle="SOLID" />
+        <attribute name="Población" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" viewDesc="True" selectionColor="141:214:247" />
+        <relation name="Características Económicas" fileName="tablas\cpv2010_municipal_caracteristicas_economicas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Servicios de Salud" fileName="tablas\cpv2010_municipal_servicios_de_Salud.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Características Educativas" fileName="tablas\cpv2010_municipal_caracteristicas_educativas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Fecundidad" fileName="tablas\cpv2010_municipal_fecundidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Hogares Censales" fileName="tablas\cpv2010_municipal_hogares_Censales.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Migración" fileName="tablas\cpv2010_municipal_migracion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Mortalidad" fileName="tablas\cpv2010_municipal_mortalidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Discapacidad" fileName="tablas\cpv2010_municipal_discapacidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Hablantes de Lengua Indígena" fileName="tablas\cpv2010_municipal_lengua_indigena.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Religión" fileName="tablas\cpv2010_municipal_religion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Situación Conyugal" fileName="tablas\cpv2010_municipal_situacion_Conyugal.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Vivienda" fileName="tablas\cpv2010_municipal_Viviendas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Índices de Desarrollo Social" fileName="tablas\cpv2010_municipal_desarrollo_social.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <labels visible="True" color="255:255:255" colorField="" fontName="Arial" fontSize="9" fontStyle="BOLD" fontColor="115:36:0" fontColorField="" rotate="0" rotateField="" position="UPLEFT:UPCENTER:UPRIGHT:MIDDLELEFT:MIDDLECENTER:MIDDLERIGHT:DOWNLEFT:DOWNCENTER:DOWNRIGHT" positionField="" alignment="LEFTJUSTIFY" duplicates="True" allocator="True" minScale="0" maxScale="5.88235294117647E-309">
+          <field fieldName="NOMBRE" alias="Población" visible="True" mask="" constant="" separator="&lt;BR&gt;" fieldType="C" fontName="Arial" fontSize="11" fontColor="65:65:65" rotate="0" bold="True" italic="False" underline="False" />
+        </labels>
+        <description text="Área geoestadística de los municipios de la República Mexicana, correspondiente al Marco Geoestadístico Nacional 2010." />
+      </layer>
+      <layer name="Localidades &gt;= 2500 habitantes y cabeceras municipales" fileName="loc_urb.shp" zorder="6" indexDoc="-1" visible="True" expanded="True" transparency="0" minScale="0" maxScale="5.88235294117647E-309" metadata="">
+        <polygon color="254:254:254" pattern="SOLID" patternName="" outLineColor="255:170:0" outLineWidth="1" outLineStyle="SOLID" />
+        <attribute name="Población" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" viewDesc="True" selectionColor="141:214:247" />
+        <relation name="Características Económicas" fileName="tablas\cpv2010_loc_urb_caracteristicas_economicas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Servicios de Salud" fileName="tablas\cpv2010_loc_urb_servicios_de_Salud.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Características Educativas" fileName="tablas\cpv2010_loc_urb_caracteristicas_educativas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Fecundidad" fileName="tablas\cpv2010_loc_urb_fecundidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Hogares Censales" fileName="tablas\cpv2010_loc_urb_hogares_Censales.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Migración" fileName="tablas\cpv2010_loc_urb_migracion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Mortalidad" fileName="tablas\cpv2010_loc_urb_mortalidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Discapacidad" fileName="tablas\cpv2010_loc_urb_discapacidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Hablantes de Lengua Indígena" fileName="tablas\cpv2010_loc_urb_lengua_indigena.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Religión" fileName="tablas\cpv2010_loc_urb_religion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Situación Conyugal" fileName="tablas\cpv2010_loc_urb_situacion_Conyugal.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Vivienda" fileName="tablas\cpv2010_loc_urb_Viviendas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Índices de Desarrollo Social" fileName="tablas\cpv2010_loc_urb_desarrollo_social.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <labels visible="True" color="255:255:255" colorField="" fontName="Arial" fontSize="8" fontStyle="NORMAL" fontColor="1:1:1" fontColorField="" rotate="0" rotateField="" position="UPLEFT:UPCENTER:UPRIGHT:MIDDLELEFT:MIDDLECENTER:MIDDLERIGHT:DOWNLEFT:DOWNCENTER:DOWNRIGHT" positionField="" alignment="LEFTJUSTIFY" duplicates="True" allocator="True" minScale="0" maxScale="5.88235294117647E-309">
+          <field fieldName="NOMBRE" alias="Población" visible="True" mask="" constant="" separator="&lt;BR&gt;" fieldType="C" fontName="Arial" fontSize="10" fontColor="78:78:78" rotate="0" bold="True" italic="False" underline="False" />
+        </labels>
+        <description text="Polígonos de las localidades (localidades de 2 500 habitantes o más, y cabeceras municipales) de la República Mexicana, correspondiente al Marco Geoestadístico Nacional 2010. " />
+      </layer>
+      <layer name="Localidades &lt; 2500 habitantes" fileName="loc_rur.shp" zorder="0" indexDoc="-1" visible="True" expanded="True" transparency="0" minScale="400000" maxScale="5.88235294117647E-309"  metadata="">
+        <point name="MARKER:1" index="1" size="6" color="199:173:114" angle="0" outLineColor="115:77:0" outLineWidth="1" />
+        <attribute name="Población" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" viewDesc="True" selectionColor="141:214:247" />
+        <relation name="Características Económicas" fileName="tablas\cpv2010_loc_rur_caracteristicas_economicas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Servicios de Salud" fileName="tablas\cpv2010_loc_rur_servicios_de_Salud.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Características Educativas" fileName="tablas\cpv2010_loc_rur_caracteristicas_educativas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Fecundidad" fileName="tablas\cpv2010_loc_rur_fecundidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Hogares Censales" fileName="tablas\cpv2010_loc_rur_hogares_Censales.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Migración" fileName="tablas\cpv2010_loc_rur_migracion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Mortalidad" fileName="tablas\cpv2010_loc_rur_mortalidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Discapacidad" fileName="tablas\cpv2010_loc_rur_discapacidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Hablantes de Lengua Indígena" fileName="tablas\cpv2010_loc_rur_lengua_indigena.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Religión" fileName="tablas\cpv2010_loc_rur_religion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Situación Conyugal" fileName="tablas\cpv2010_loc_rur_situacion_Conyugal.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Vivienda" fileName="tablas\cpv2010_loc_rur_Viviendas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <relation name="Índices de Desarrollo Social" fileName="tablas\cpv2010_loc_rur_desarrollo_social.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+        <labels visible="True" color="255:255:255" colorField="" fontName="Arial" fontSize="8" fontStyle="NORMAL" fontColor="1:1:1" fontColorField="" rotate="0" rotateField="" position="UPLEFT:UPCENTER:UPRIGHT:MIDDLELEFT:MIDDLECENTER:MIDDLERIGHT:DOWNLEFT:DOWNCENTER:DOWNRIGHT" positionField="" alignment="LEFTJUSTIFY" duplicates="True" allocator="True" minScale="150000" maxScale="5.88235294117647E-309">
+          <field fieldName="NOMBRE" alias="Población" visible="True" mask="" constant="" separator="&lt;BR&gt;" fieldType="C" fontName="Arial" fontSize="8" fontColor="106:106:106" rotate="0" bold="False" italic="False" underline="False" />
+        </labels>
+        <description text="Localidades (localidades que tienen una población menor a 2 500 habitantes y no son cabeceras municipales) de la República Mexicana, correspondiente al Marco Geoestadístico Nacional 2010." />
+      </layer>
+      <group name="Localidades" metadata="" expanded="True">
+        <layer name="AGEB urbana" fileName="ageb_urb.shp" zorder="1" indexDoc="-1" visible="True" expanded="True" transparency="0" minScale="75000" maxScale="5.88235294117647E-309"  metadata="">
+          <polygon color="227:227:152" pattern="TRANSPARENT" patternName="" outLineColor="143:45:0" outLineWidth="1" outLineStyle="DASHDOT" />
+          <attribute name="Población" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" viewDesc="True" selectionColor="141:214:247" />
+          <relation name="Características Económicas" fileName="tablas\cpv2010_ageb_urb_caracteristicas_economicas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Servicios de Salud" fileName="tablas\cpv2010_ageb_urb_servicios_de_Salud.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Características Educativas" fileName="tablas\cpv2010_ageb_urb_caracteristicas_educativas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Fecundidad" fileName="tablas\cpv2010_ageb_urb_fecundidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Hogares Censales" fileName="tablas\cpv2010_ageb_urb_hogares_Censales.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Migración" fileName="tablas\cpv2010_ageb_urb_migracion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Mortalidad" fileName="tablas\cpv2010_ageb_urb_mortalidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Discapacidad" fileName="tablas\cpv2010_ageb_urb_discapacidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Hablantes de Lengua Indígena" fileName="tablas\cpv2010_ageb_urb_lengua_indigena.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Religión" fileName="tablas\cpv2010_ageb_urb_religion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Situación Conyugal" fileName="tablas\cpv2010_ageb_urb_situacion_Conyugal.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Vivienda" fileName="tablas\cpv2010_ageb_urb_Viviendas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Índices de Desarrollo Social" fileName="tablas\cpv2010_ageb_urb_desarrollo_social.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <labels visible="False" color="255:255:255" colorField="" fontName="Tahoma" fontSize="9" fontStyle="BOLD" fontColor="115:36:0" fontColorField="" rotate="0" rotateField="" position="UPRIGHT" positionField="" alignment="LEFTJUSTIFY" duplicates="True" allocator="True" minScale="0" maxScale="5.88235294117647E-309">
+            <field fieldName="CVEGEO" alias="Población" visible="True" mask="" constant="" separator="&lt;br&gt;" fieldType="C" fontName="Tahoma" fontSize="9" fontColor="115:36:0" rotate="0" bold="False" italic="False" underline="False" />
+          </labels>
+          <description text="La extensión territorial, ocupada por un conjunto de manzanas que, generalmente son de 1 a 50, delimitadas por calles, avenidas, andadores o cualquier otro rasgo fácil de identificar en el terreno y cuyo uso del suelo sea principalmente habitacional, industrial, de servicios y comercial." />
+        </layer>
+        <layer name="Manzanas" fileName="manzanas.shp" zorder="5" indexDoc="-1" visible="True" expanded="True" transparency="0" minScale="75000" maxScale="5.88235294117647E-309"  metadata="">
+          <polygon color="238:236:232" pattern="SOLID" patternName="" outLineColor="208:205:201" outLineWidth="1" outLineStyle="SOLID" />
+          <attribute name="Población" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" viewDesc="True" selectionColor="141:214:247" />
+          <relation name="Características Económicas" fileName="tablas\cpv2010_manzanas_caracteristicas_economicas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Servicios de Salud" fileName="tablas\cpv2010_manzanas_servicios_de_Salud.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Características Educativas" fileName="tablas\cpv2010_manzanas_caracteristicas_educativas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Fecundidad" fileName="tablas\cpv2010_manzanas_fecundidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Hogares Censales" fileName="tablas\cpv2010_manzanas_hogares_Censales.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Migración" fileName="tablas\cpv2010_manzanas_migracion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Mortalidad" fileName="tablas\cpv2010_manzanas_mortalidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Discapacidad" fileName="tablas\cpv2010_manzanas_discapacidad.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Hablantes de Lengua Indígena" fileName="tablas\cpv2010_manzanas_lengua_indigena.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Religión" fileName="tablas\cpv2010_manzanas_religion.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Situación Conyugal" fileName="tablas\cpv2010_manzanas_situacion_Conyugal.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <relation name="Vivienda" fileName="tablas\cpv2010_manzanas_Viviendas.dbf" primaryKey="CVEGEO" foreignKey="CVEGEO" descFileName="Descriptores\desc_cpv2010.dbf" filterFileName="" />
+          <description text="Espacio geográfico que está constituido por un grupo de viviendas, edificios, predios, lotes o terrenos de uso habitacional, comercial, industrial, de servicios, entre otros." />
+        </layer>
+        <layer name="Servicios área" fileName="servicios_a.shp" zorder="2" indexDoc="-1" visible="True" expanded="False" transparency="0" minScale="30000" maxScale="5.88235294117647E-309" metadata="">
+          <polygon color="238:236:232" pattern="SOLID" patternName="" outLineColor="227:204:152" outLineWidth="1" outLineStyle="CLEAR" />
+          <attribute name="Atributos" descFileName="Descriptores\desc_cpv2010.dbf" viewDesc="False" selectionColor="141:214:247" />
+          <description text="Conjunto de edificios y espacios predominantemente de uso público de la localidad urbana,  en el que se realizan actividades complementarias a las de habitación y trabajo, o bien en los que se proporciona a la población servicios de bienestar social y de apoyo a actividades económicas: áreas verdes, áreas deportivas, cementerios, central de abastos, centrales camioneras, centros comerciales, escuelas, estadios, hospitales, industrias, mercados, museos, palacio de gobierno, plazas, plazas de toros, puente, sistema de transporte metropolitano, templos, etc." />
+        </layer>
+        <layer name="Servicios línea" fileName="servicios_l.shp" zorder="4" indexDoc="-1" visible="True" expanded="True" transparency="0" minScale="30000" maxScale="5.88235294117647E-309" metadata="">
+          <line color="189:182:181" width="1" style="SOLID" outLineColor="30:194:56" outLineWidth="0" outLineStyle="SOLID" />
+          <attribute name="Atributos" descFileName="Descriptores\desc_cpv2010.dbf" viewDesc="False" selectionColor="141:214:247" />
+          <description text="Conjunto de edificios y espacios predominantemente de uso público de la localidad urbana,  en el que se realizan actividades complementarias a las de habitación y trabajo, o bien en los que se proporciona a la población servicios de bienestar social y de apoyo a actividades económicas: áreas verdes, áreas deportivas, cementerios, central de abastos, centrales camioneras, centros comerciales, escuelas, estadios, hospitales, industrias, mercados, museos, palacio de gobierno, plazas, plazas de toros, puente, sistema de transporte metropolitano, templos, etc." />
+        </layer>
+        <layer name="Servicios punto" fileName="servicios_p.shp" zorder="-1" indexDoc="-1" visible="False" expanded="True" transparency="0" minScale="30000" maxScale="5.88235294117647E-309" metadata="">
+          <point name="MARKER:0" index="0" size="6" color="171:199:114" angle="0" outLineColor="64:64:64" outLineWidth="1" />
+          <attribute name="Atributos" descFileName="Descriptores\desc_cpv2010.dbf" viewDesc="False" selectionColor="141:214:247" />
+          <labels visible="False" color="255:255:255" colorField="" fontName="Arial" fontSize="8" fontStyle="NORMAL" fontColor="1:1:1" fontColorField="" rotate="0" rotateField="" position="MIDDLECENTER" positionField="" alignment="LEFTJUSTIFY" duplicates="True" allocator="True" minScale="0" maxScale="5.88235294117647E-309">
+            <field fieldName="GEOGRAFICO" alias="Atributos" visible="True" mask="" constant="" separator="&lt;BR&gt;" fieldType="C" fontName="Arial" fontSize="6" fontColor="1:1:1" rotate="0" bold="False" italic="False" underline="False" />
+          </labels>
+          <description text="Conjunto de edificios y espacios predominantemente de uso público de la localidad urbana,  en el que se realizan actividades complementarias a las de habitación y trabajo, o bien en los que se proporciona a la población servicios de bienestar social y de apoyo a actividades económicas: áreas verdes, áreas deportivas, cementerios, central de abastos, centrales camioneras, centros comerciales, escuelas, estadios, hospitales, industrias, mercados, museos, palacio de gobierno, plazas, plazas de toros, puente, sistema de transporte metropolitano, templos, etc." />
+        </layer>
+        <layer name="Ejes viales" fileName="eje_vial.shp" zorder="3" indexDoc="0" visible="True" expanded="True" transparency="0" minScale="150000" maxScale="5.88235294117647E-309" metadata="">
+          <line color="216:210:200" width="1" style="SOLID" outLineColor="216:210:200" outLineWidth="0" outLineStyle="SOLID" />
+          <attribute name="Atributos" descFileName="Descriptores\desc_cpv2010.dbf" viewDesc="False" selectionColor="141:214:247" />
+          <labels visible="True" color="255:255:255" colorField="" fontName="Arial" fontSize="8" fontStyle="NORMAL" fontColor="1:1:1" fontColorField="" rotate="0" rotateField="" position="MIDDLECENTER" positionField="" alignment="FOLLOW" duplicates="True" allocator="True" minScale="50000" maxScale="100">
+            <field fieldName="NOMVIAL" alias="Atributos" visible="True" mask="" constant="" separator="&lt;BR&gt;" fieldType="C" fontName="Arial" fontSize="8" fontColor="1:1:1" rotate="0" bold="False" italic="False" underline="False" />
+          </labels>
+          <description text="Circulación para el tránsito vehicular y/o peatonal, que se encuentra en las localidades." />
+        </layer>
+      </group>
+    </group>
+  </spaceView>
+</project>
