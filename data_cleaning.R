@@ -5,6 +5,12 @@ library(rgdal)
 library(stringi)
 library(stringdist)
 
+# Functions: Convert to unaccented and lowercase characters
+ascii_lower <- function (v) {
+  stri_trans_general(v, "latin-ascii") %>% tolower()
+}
+
+## Data carpentries
 dat <- read_csv("data/addresses_google.csv")
 dat$ID <- 1:nrow(dat)
 
@@ -20,7 +26,7 @@ loc_rur_lcc <- shapefile("data/shp/loc_rur.shp")
 loc_rur_wgs <- loc_rur_lcc %>%
   spTransform(CRS("+init=epsg:4326"))
 
-# Build a table of muncipal & locality
+## Build a table of muncipal & locality
 tmp1 <- loc_urb_lcc@data %>% 
   dplyr::select(CVEGEO, MUNICIPIO = NOM_MUN, LOCALIDAD = NOMBRE) %>%
   mutate(URB = "U")
@@ -33,7 +39,7 @@ dat_locnombre <- bind_rows(tmp1, tmp2)
 dat_locnombre$MUNICIPIO <- stri_trans_general(dat_locnombre$MUNICIPIO, "latin-ascii") %>% tolower()
 dat_locnombre$LOCALIDAD <- stri_trans_general(dat_locnombre$LOCALIDAD, "latin-ascii") %>% tolower()
 
-# Merge with school dataset with municipal & locality
+## Merge with school dataset with municipal & locality
 dat_loc <- dat_incomplete %>%
   dplyr::select(ID, LOCALIDAD, MUNICIPIO) %>%
   mutate(LOCALIDAD = tolower(LOCALIDAD),
@@ -41,6 +47,7 @@ dat_loc <- dat_incomplete %>%
   left_join(dat_locnombre)
 dat_loc
 
+## Data Cleaning
 # 46 Unmatched localities
 dat_loc_unmatch <- dat_loc %>%
   filter(is.na(CVEGEO))
@@ -103,6 +110,9 @@ dat_loc
 dat_loc_unmatch <- dat_loc %>%
   filter(is.na(CVEGEO))
 dat_loc_unmatch
+
+dat_loc_match <- dat_loc %>%
+  filter(!is.na(CVEGEO))
 
 # There are localities with same names but multiple points in the shapefile
 # Further complication of some localities matching both Urban and Rural polygons
