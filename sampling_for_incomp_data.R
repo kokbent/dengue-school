@@ -1,8 +1,8 @@
 library(rgeos)
 library(mgcv)
 
-ntl <- read_tsv("data/all_yucatan_pixels.out", 
-                col_names = c("long", "lat", "ntl", "mun_id", "mun"))
+ntl <- read.csv("data/yuc_ntl.csv")
+colnames(ntl)[1:2] <- c("long", "lat")
 ntl$LOCALIDAD <- NA
 ntl$MUNICIPIO <- NA
 ntl$URB <- NA
@@ -80,6 +80,10 @@ for (i in 1:nrow(dat_inc_1sp)) {
     ntl_sub2 <- ntl_sub1[cond2,] %>%
       mutate(prob = ntl/sum(ntl)) %>%
       as.data.frame()
+    if(any(is.nan(ntl_sub2$prob))) {
+      ntl_sub2$prob <- 1/nrow(ntl_sub2)
+      print("panic!")
+    }
     if (nrow(ntl_sub2) == 0) {
       samppoint_mat[i,] <- NA
     } else {
