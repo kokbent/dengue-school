@@ -13,15 +13,19 @@ dat_complete <- dat %>%
 dat_incomplete <- dat %>%
   filter(LAT_HITS == "ZERO_RESULTS")
 
-loc_urb <- shapefile("data/shp/loc_urb.shp")
-loc_rur <- shapefile("data/shp/loc_rur.shp")
+loc_urb_lcc <- shapefile("data/shp/loc_urb.shp")
+loc_urb_wgs <- loc_urb_lcc  %>%
+  spTransform(CRS("+init=epsg:4326"))
+loc_rur_lcc <- shapefile("data/shp/loc_rur.shp")
+loc_rur_wgs <- loc_rur_lcc %>%
+  spTransform(CRS("+init=epsg:4326"))
 
 # Build a table of muncipal & locality
-tmp1 <- loc_urb@data %>% 
+tmp1 <- loc_urb_lcc@data %>% 
   dplyr::select(CVEGEO, MUNICIPIO = NOM_MUN, LOCALIDAD = NOMBRE) %>%
   mutate(URB = "U")
 
-tmp2 <- loc_rur@data %>% 
+tmp2 <- loc_rur_lcc@data %>% 
   dplyr::select(CVEGEO, MUNICIPIO = NOM_MUN, LOCALIDAD = NOMBRE) %>%
   mutate(URB = "R")
 
