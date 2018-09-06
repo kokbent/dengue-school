@@ -158,6 +158,13 @@ dat_final <- dat_complete %>%
 
 sch_coords <- cbind(dat_final$long, dat_final$lat) %>%
   SpatialPoints(proj4string = CRS("+init=epsg:4326"))
+
+png("google_results.png", width=1200, height=1200)
 plot(mun_shp)
 plot(sch_coords[is.na(dat_final$ntl),], add=T, col="blue")
+dev.off()
+
+png("rand_samp.png", width=1200, height=1200)
+plot(mun_shp)
 plot(sch_coords[!is.na(dat_final$ntl),], add=T, col="red")
+dev.off()
