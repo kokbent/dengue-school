@@ -146,6 +146,14 @@ samppt_unmatch_df$ID = ids
 samppt_full <- bind_rows(samppt_df_comp, samppt_unmatch_df)
 colSums(is.na(samppt_full))
 
+# Jitter the point by +- 7.5 arsecond.
+resolution <- 15/3600
+x <- runif(nrow(samppt_full), -resolution/2, resolution/2)
+y <- runif(nrow(samppt_full), -resolution/2, resolution/2)
+samppt_full$long <- samppt_full$long + x
+samppt_full$lat <- samppt_full$lat + y
+
+# Merge sampled coordinates with geocoded coordinates
 dat_incomplete_samp <- samppt_full %>%
   left_join(dat_incomplete_v2)
 
@@ -155,7 +163,9 @@ dat_final <- dat_complete %>%
          LOCALIDAD = tolower(LOCALIDAD), MUNICIPIO = tolower(MUNICIPIO)) %>%
   bind_rows(dat_incomplete_samp) %>%
   arrange(ID)
+write_csv(dat_final, "data/school_coordinates_full.csv")
 
+# Some graphics
 sch_coords <- cbind(dat_final$long, dat_final$lat) %>%
   SpatialPoints(proj4string = CRS("+init=epsg:4326"))
 
